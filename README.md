@@ -35,3 +35,35 @@ copy wechat ID
 ```
 
 > 首次上传将除‘智能上传’外全勾上上传, 第二次上传选‘智能上传’
+
+## 5-2
+
+## 5-3: Build local development environment
+
+> server/config.js copy [本地搭建微信小程序的开发环境](https://cloud.tencent.com/developer/ask/25171) [Secretid/SecretKey](https://console.cloud.tencent.com/capi) [APPID](https://console.cloud.tencent.com/developer)
+
+### mysql install
+
+```node
+brew intall mysql
+mysql.server start
+mysql -u root
+```
+
+### create database
+
+```node
+mysql:
+create database cAuth;
+```
+
+```node
+npm install -g nodemon
+```
+
+```node
+cd server:
+npm install
+npm run dev
+node tools/initdb.js
+```
