@@ -71,3 +71,5 @@ npm run dev
 ## 5-4: 原型图
 
 ## 5-5, 5-6: skeleton
+
+## 5-7: bottom nav
