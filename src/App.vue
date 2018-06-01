@@ -1,11 +1,17 @@
 <script>
+import config from './config'
 export default {
-  created () {
-    console.log('app created and cache logs by setStorageSync')
+  async created() {
+    wx.request({
+      url: config.host = '/weapp/demo',
+      success: function(res) {
+        console.log(res)
+      }
+    })
+    console.log('weapp starts!')
   }
 }
 </script>
 
 <style>
-
 </style>

@@ -73,3 +73,5 @@ npm run dev
 ## 5-5, 5-6: skeleton
 
 ## 5-7: bottom nav
+
+## 5-8: package util.js config.js
