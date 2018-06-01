@@ -1,4 +1,4 @@
-﻿// 工具函数库
+// 工具函数库
 import config from './config'
 
 // http get工具函数 获取数据

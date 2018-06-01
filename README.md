@@ -81,3 +81,11 @@ npm run dev
 ## 5-8: package util.js config.js
 
 ## 5-9: summary
+
+## 5-10: ESLint
+
+```json
+"lint": "eslint --fix --ext .js,.vue src"
+```
+
+> /* eslint-disable */

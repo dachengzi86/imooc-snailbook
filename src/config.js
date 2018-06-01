@@ -1,4 +1,4 @@
-﻿// 配置项
+// 配置项
 
 const host = 'http://localhost:5757'
 
