@@ -64,6 +64,10 @@ npm install -g nodemon
 ```node
 cd server:
 npm install
-npm run dev
 node tools/initdb.js
+npm run dev
 ```
+
+## 5-4: 原型图
+
+## 5-5, 5-6: skeleton
