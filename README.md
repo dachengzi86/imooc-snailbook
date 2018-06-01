@@ -40,7 +40,7 @@ copy wechat ID
 
 ## 5-3: Build local development environment
 
-> server/config.js copy [本地搭建微信小程序的开发环境](https://cloud.tencent.com/developer/ask/25171) [Secretid/SecretKey](https://console.cloud.tencent.com/capi) [APPID](https://console.cloud.tencent.com/developer)
+> [本地环境](https://cloud.tencent.com/document/product/619/11442) server/config.js copy [本地搭建微信小程序的开发环境](https://cloud.tencent.com/developer/ask/25171) [Secretid/SecretKey](https://console.cloud.tencent.com/capi) [APPID](https://console.cloud.tencent.com/developer)
 
 ### mysql install
 
@@ -50,6 +50,12 @@ mysql.server start
 mysql -u root
 ```
 
+### nodemon install, refresh node
+
+```node
+npm install -g nodemon
+```
+
 ### create database
 
 ```node
@@ -57,9 +63,7 @@ mysql:
 create database cAuth;
 ```
 
-```node
-npm install -g nodemon
-```
+### run server
 
 ```node
 cd server:
@@ -75,3 +79,5 @@ npm run dev
 ## 5-7: bottom nav
 
 ## 5-8: package util.js config.js
+
+## 5-9: summary
