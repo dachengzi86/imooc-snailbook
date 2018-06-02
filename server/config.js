@@ -6,7 +6,7 @@ const CONF = {
     qcloudAppId: '1256844092',
     qcloudSecretId: 'AKIDXzHZvDOVP8g3ShsgQzNadXM4d1EKk1c2',
     qcloudSecretKey: 'NZaUE055vb6RdfWClAPUPDtPp5A6rVzI',
-    // wxMessageToken: 'weixinmsgtoken',
+    wxMessageToken: 'weixinmsgtoken',
     networkTimeout: 30000,
 
     port: '5757',
@@ -48,8 +48,7 @@ const CONF = {
     },
 
     // 微信登录态有效期
-    wxLoginExpires: 7200,
-    wxMessageToken: 'abcdefgh'
+    wxLoginExpires: 7200
 }
 
 module.exports = CONF

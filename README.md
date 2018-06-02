@@ -38,6 +38,8 @@ copy wechat ID
 
 ## 5-2
 
+> 微信开发者工具: 修改要上传部署
+
 ## 5-3: Build local development environment
 
 > [本地环境](https://cloud.tencent.com/document/product/619/11442) server/config.js copy [本地搭建微信小程序的开发环境](https://cloud.tencent.com/developer/ask/25171) [Secretid/SecretKey](https://console.cloud.tencent.com/capi) [APPID](https://console.cloud.tencent.com/developer)
@@ -89,3 +91,30 @@ npm run dev
 ```
 
 > /* eslint-disable */
+
+## 6-1: user center message show, bug
+
+```node
+mysql:
+use cAuth
+show tables;
+select * from cSessionInfo;
+```
+
+```node
+npm install wafer2-client-sdk -S
+```
+
+```node
+mysql:
+create database woniu;
+create table test(id int, name varchar(100));
+show tables;
+select * from test;
+```
+
+### scss
+
+```node
+npm install sass-loader node-sass -D
+```
