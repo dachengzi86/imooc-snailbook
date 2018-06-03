@@ -14,7 +14,7 @@ export default {
 
 		// const res = await get('/weapp/demo')
 		// console.log(123, res)
-		// console.log('weapp starts!')
+		console.log('小程序启动了')
 	}
 }
 </script>

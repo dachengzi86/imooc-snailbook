@@ -1,15 +1,14 @@
 ﻿<template>
   <div class='container'>
-    <div class='userinfo' @click='login' open-type='getUserInfo' bindgetuserinfo='onGotUserInfo' lang='zh_CN'>
+    <div class='userinfo'>
       <img :src='userinfo.avatarUrl' alt="">
       <p>{{userinfo.nickName}}</p>
     </div>
-		<!-- <button open-type='getUserInfo' bindgetuserinfo='onGotUserInfo' lang='zh_CN'>获取用户信息</button> -->
-		<!-- <open-data type='userAvatarUrl'></open-data> -->
-    <!-- <open-data type='userNickName' lang='zh_CN'></open-data>  -->
+		<!-- <open-data class='multi-hp-avatar' type='userAvatarUrl'></open-data> -->
+		<!-- <open-data class='multi-hp-nickname' type='userNickName'></open-data> -->
     <YearProgress></YearProgress>
-    <button class='btn' @click='scanBook'>添加图书</button>
-    <!-- <button class='btn' v-if='userinfo.openId' @click='scanBook'>添加图书</button> -->
+    <button v-if='userinfo.openId' class='btn' @click='scanBook'>添加图书</button>
+		<button v-else open-type='getUserInfo' lang='zh_CN' class='btn' @getuserinfo='login'>点击登录</button> 
   </div>
 </template>
 
@@ -18,7 +17,6 @@ import qcloud from 'wafer2-client-sdk'
 import YearProgress from '@/components/YearProgress'
 import { showSuccess, post, showModal } from '@/util'
 import config from '@/config'
-
 export default {
 	components: {
 		YearProgress
@@ -33,7 +31,6 @@ export default {
 	},
 	methods: {
 		async addBook(isbn) {
-			/* https://api.douban.com/v2/book/isbn/9787115352460 */
 			console.log(isbn)
 			const res = await post('/weapp/addbook', {
 				isbn,
@@ -51,10 +48,8 @@ export default {
 			})
 		},
 		login() {
-			/* 设置登录地址 */
-			/* VM8983:1 获取 wx.getUserInfo 接口后续将不再出现授权弹窗，请注意升级 */
 			let user = wx.getStorageSync('userinfo')
-			const that = this
+			const self = this
 			if (!user) {
 				qcloud.setLoginUrl(config.loginUrl)
 				qcloud.login({
@@ -65,15 +60,19 @@ export default {
 							success(userRes) {
 								showSuccess('登录成功')
 								wx.setStorageSync('userinfo', userRes.data.data)
-								that.userinfo = userRes.data.data
+								self.userinfo = userRes.data.data
 							}
 						})
+					},
+					fail: function(err) {
+						console.log('登录失败', err)
 					}
 				})
 			}
 		}
 	},
 	onShow() {
+		// console.log(123)
 		let userinfo = wx.getStorageSync('userinfo')
 		// console.log([userinfo])
 		if (userinfo) {
@@ -88,11 +87,9 @@ export default {
 .container {
 	padding: 0 30rpx;
 }
-
 .userinfo {
 	margin-top: 100rpx;
 	text-align: center;
-
 	img {
 		width: 150rpx;
 		height: 150rpx;
