@@ -25,7 +25,7 @@ export default {
 		return {
 			userinfo: {
 				avatarUrl: '../../../static/img/unlogin.png',
-				nickName: '点击登录'
+				nickName: ''
 			}
 		}
 	},
@@ -52,6 +52,7 @@ export default {
 			const self = this
 			if (!user) {
 				qcloud.setLoginUrl(config.loginUrl)
+				console.log('run1', config.loginUrl)
 				qcloud.login({
 					success: function(userinfo) {
 						qcloud.request({
