@@ -121,4 +121,16 @@ npm install sass-loader node-sass -D
 
 ## 6-2: user center yearprogress
 
-## 7-1
+## 7-1: mysql use
+
+```node
+mysql.server start
+mysql -u root
+show databases;
+use cAuth;
+show tables;
+desc cSeesionInfo;
+select * from cSessionInfo;
+select create-time, open_id from cSessionInfo;
+drop table test;
+```
