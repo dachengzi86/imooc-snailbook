@@ -118,3 +118,7 @@ select * from test;
 ```node
 npm install sass-loader node-sass -D
 ```
+
+## 6-2: user center yearprogress
+
+## 7-1

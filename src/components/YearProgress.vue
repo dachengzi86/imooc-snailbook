@@ -8,6 +8,7 @@
 <script>
 export default {
 	methods: {
+		/* 闰年 */
 		isLeapYear() {
 			const year = new Date().getFullYear()
 			if (year % 400 === 0) {
@@ -31,7 +32,7 @@ export default {
 			start.setMonth(0)
 			start.setDate(1)
 			// start就是今年第一天
-			// 今天的时间戳 减去今年第一天的时间戳
+			// 今天的时间戳 减去今年第一天的时间戳, 时间戳为毫秒
 			let offset = new Date().getTime() - start.getTime()
 			return parseInt(offset / 1000 / 60 / 60 / 24) + 1
 		},

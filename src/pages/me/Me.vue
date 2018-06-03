@@ -1,19 +1,23 @@
 ﻿<template>
-  <div class="container">
-    <div class="userinfo" @click='login'>
-      <img :src="userinfo.avatarUrl" alt="">
+  <div class='container'>
+    <div class='userinfo' @click='login' open-type='getUserInfo' bindgetuserinfo='onGotUserInfo' lang='zh_CN'>
+      <img :src='userinfo.avatarUrl' alt="">
       <p>{{userinfo.nickName}}</p>
     </div>
+		<!-- <button open-type='getUserInfo' bindgetuserinfo='onGotUserInfo' lang='zh_CN'>获取用户信息</button> -->
+		<!-- <open-data type='userAvatarUrl'></open-data> -->
+    <!-- <open-data type='userNickName' lang='zh_CN'></open-data>  -->
     <YearProgress></YearProgress>
-    <button v-if='userinfo.openId' @click='scanBook' class='btn'>添加图书</button>
+    <button class='btn' @click='scanBook'>添加图书</button>
+    <!-- <button class='btn' v-if='userinfo.openId' @click='scanBook'>添加图书</button> -->
   </div>
 </template>
 
 <script>
 import qcloud from 'wafer2-client-sdk'
 import YearProgress from '@/components/YearProgress'
-import config from '@/config'
 import { showSuccess } from '@/util'
+import config from '@/config'
 
 export default {
 	components: {
@@ -38,8 +42,10 @@ export default {
 			})
 		},
 		login() {
+			/* 设置登录地址 */
+			/* VM8983:1 获取 wx.getUserInfo 接口后续将不再出现授权弹窗，请注意升级 */
 			let user = wx.getStorageSync('userinfo')
-			const self = this
+			const that = this
 			if (!user) {
 				qcloud.setLoginUrl(config.loginUrl)
 				qcloud.login({
@@ -50,7 +56,7 @@ export default {
 							success(userRes) {
 								showSuccess('登录成功')
 								wx.setStorageSync('userinfo', userRes.data.data)
-								self.userinfo = userRes.data.data
+								that.userinfo = userRes.data.data
 							}
 						})
 					}
@@ -59,7 +65,6 @@ export default {
 		}
 	},
 	onShow() {
-		// console.log(123)
 		let userinfo = wx.getStorageSync('userinfo')
 		// console.log([userinfo])
 		if (userinfo) {
@@ -74,9 +79,11 @@ export default {
 .container {
 	padding: 0 30rpx;
 }
+
 .userinfo {
 	margin-top: 100rpx;
 	text-align: center;
+
 	img {
 		width: 150rpx;
 		height: 150rpx;

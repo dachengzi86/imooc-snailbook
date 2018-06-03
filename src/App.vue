@@ -1,7 +1,7 @@
 <script>
-import { showSuccess } from './util'
-import qcloud from 'wafer2-client-sdk'
-import config from './config'
+// import { showSuccess } from './util'
+// import qcloud from 'wafer2-client-sdk'
+// import config from './config'
 
 export default {
 	async created() {
@@ -15,23 +15,6 @@ export default {
 		// const res = await get('/weapp/demo')
 		// console.log(123, res)
 		// console.log('weapp starts!')
-
-		/* 设置登录地址 */
-		/* VM8983:1 获取 wx.getUserInfo 接口后续将不再出现授权弹窗，请注意升级 */
-		let user = wx.getStorageSync('userinfo')
-		if (!user) {
-			qcloud.setLoginUrl(config.loginUrl)
-			qcloud.login({
-				success: function(userinfo) {
-					console.log('登录成功', userinfo)
-					showSuccess('登录成功')
-					wx.setStorageSync('userinfo', userinfo)
-				},
-				fail: function(err) {
-					console.log('登录失败', err)
-				}
-			})
-		}
 	}
 }
 </script>
