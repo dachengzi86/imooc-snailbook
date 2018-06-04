@@ -174,4 +174,12 @@ select title from books;
 
 ## 8-4: database add User NickName
 
-## 8-5: pull down reload data
+## 8-5: pull down refresh
+
+## 8-6: pull down reload data
+
+## 8-7
+
+```node
+alter table books add column count init default 0;
+```
