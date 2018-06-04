@@ -9,10 +9,10 @@ module.exports = async (ctx) => {
                   .join('cSessionInfo', 'books.openid', 'cSessionInfo.open_id')
                   .orderBy('books.id', 'desc')
     let books
-    if(openid){
+    if (openid) {
         // 根据opid过滤
         books = await mysqlSelect.where('books.openid', openid)
-    }else{
+    } else {
         // 全部图书 分页
         books = await mysqlSelect.limit(size).offset(Number(page) * size)
     }

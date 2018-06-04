@@ -165,3 +165,5 @@ CREATE TABLE books (
 ```node
 select title from books;
 ```
+
+## 8-1
