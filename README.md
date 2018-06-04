@@ -171,3 +171,7 @@ select title from books;
 ## 8-2: show Book data
 
 ## 8-3: Rate component
+
+## 8-4: database add User NickName
+
+## 8-5: pull down refresh

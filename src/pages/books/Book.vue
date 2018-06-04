@@ -63,6 +63,7 @@ export default {
 		}
 	},
 	onPullDownRefresh() {
+		console.log('下拉')
 		this.getList(true)
 		this.getTop()
 	},
