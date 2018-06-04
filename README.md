@@ -166,4 +166,6 @@ CREATE TABLE books (
 select title from books;
 ```
 
-## 8-1
+## 8-1: get Book data
+
+## 8-2: show Book data

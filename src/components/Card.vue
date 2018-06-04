@@ -2,6 +2,7 @@
   <a :href="detailUrl">
     <div class="book-card">
       <div class="thumb" @click.stop="preview">
+				<!-- mode: wechat document -->
         <img :src="book.image" class="img" mode="aspectFit"/>
       </div>
       <div class="detail">
