@@ -169,3 +169,5 @@ select title from books;
 ## 8-1: get Book data
 
 ## 8-2: show Book data
+
+## 8-3: Rate component

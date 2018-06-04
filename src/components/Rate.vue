@@ -11,7 +11,10 @@
 // vue-tiny-rate
 export default {
 	props: {
-		value: { type: [Number, String], default: '0' }
+		value: {
+			type: [Number, String],
+			default: '0'
+		}
 	},
 	computed: {
 		style() {
