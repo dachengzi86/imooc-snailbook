@@ -15,7 +15,6 @@
 // 1     10-20
 // 2     20-30（5）
 // page 当前第几页
-
 // 没有更多数据
 // 1. page=0 不能显示这条提醒
 // 2. page>0 数据长度<10 停止触底加载
@@ -44,9 +43,9 @@ export default {
 			}
 			wx.showNavigationBarLoading()
 			const books = await get('/weapp/booklist', { page: this.page })
-			if (books.list.length < 10 && this.page > 0) {
+			if (books.list.length < 3 && this.page > 0) {
 				this.more = false
-				console.log(this.more)
+				console.log('没有更多数据', this.more)
 			}
 			if (init) {
 				this.books = books.list
