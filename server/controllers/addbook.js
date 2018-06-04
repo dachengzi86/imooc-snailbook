@@ -11,6 +11,16 @@ module.exports = async (ctx) => {
     const {isbn, openid} = ctx.request.body
     console.log('添加图书', isbn, openid)
     if (isbn && openid) {
+        const findRes = await mysql('books').select().where('isbn', isbn)
+        if (findRes.length) {
+            ctx.state = {
+                code: -1,
+                data: {
+                    msg: '图书已存在'
+                }
+            }
+            return
+        }
         let url = 'https://api.douban.com/v2/book/isbn/' + isbn
         console.log(url)
         const bookinfo = await getJSON(url)
