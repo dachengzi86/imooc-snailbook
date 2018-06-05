@@ -1,20 +1,20 @@
 ﻿<template>
-<div class="container">
-  <CommentList
-    v-if='userinfo.openId'
-    type='user' 
-    :comments="comments"
-  ></CommentList>
-  <div v-if='userinfo.openId'>
-    <div class="page-title">我的图书</div>
-    <Card 
-      v-for='book in books' 
-      :key='book.id'
-      :book='book'
-    ></Card>
-    <div v-if='!books.length'>暂时还没添加过书，快去添加几本把</div>
+  <div class="container">
+    <CommentList
+      v-if='userinfo.openId'
+      type='user' 
+      :comments="comments"
+    ></CommentList>
+    <div v-if='userinfo.openId'>
+      <div class="page-title">我的图书</div>
+      <Card 
+        v-for='book in books' 
+        :key='book.id'
+        :book='book'
+      ></Card>
+      <div v-if='!books.length'>暂时还没添加过书，快去添加几本把</div>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -55,6 +55,7 @@ export default {
 		}
 	},
 	onPullDownRefresh() {
+		console.log('下拉刷新')
 		this.init()
 		wx.stopPullDownRefresh()
 	},

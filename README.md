@@ -218,3 +218,5 @@ show create table books
 > package.json lint
 
 ## 10-1: comment page show has comment
+
+## 10-2: book list
