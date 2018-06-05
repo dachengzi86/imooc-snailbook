@@ -216,3 +216,5 @@ show create table books
 ## 9-13: format
 
 > package.json lint
+
+## 10-1: comment page show has comment
