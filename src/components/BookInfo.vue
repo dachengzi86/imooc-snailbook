@@ -30,7 +30,7 @@
       <div class="badge" :key='tag' v-for='tag in info.tags'>{{tag}}</div>
     </div>
     <div class="summary">
-      <p :key='i' v-for='(sum,i) in info.summary'>{{sum}}</p>
+      <p :key='i' v-for='(sum, i) in info.summary'>{{sum}}</p>
     </div>
   </div>
 </template>
