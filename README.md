@@ -192,3 +192,5 @@ alter table books add column count init default 0;
 mysql:
 show create table books
 ```
+
+## 9-1: get bookinfo, change title

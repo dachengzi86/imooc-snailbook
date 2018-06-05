@@ -2,6 +2,7 @@ const {mysql} = require('../qcloud')
 
 module.exports = async (ctx) => {
     const {id} = ctx.request.query
+    /* first: 数据是数组, 返回第一个元素 */
     const detail = await mysql('books')
                         .select('books.*', 'cSessionInfo.user_info')
                         .join('cSessionInfo', 'books.openid', 'cSessionInfo.open_id')
