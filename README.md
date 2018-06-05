@@ -206,3 +206,5 @@ show create table books
 ## 9-6: get Location
 
 ## 9-7: click comment post request
+
+## 9-8: comment back-end interface
