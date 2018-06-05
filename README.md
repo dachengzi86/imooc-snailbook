@@ -194,3 +194,5 @@ show create table books
 ```
 
 ## 9-1: get bookinfo, change title
+
+## 9-2: book cover
