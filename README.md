@@ -220,3 +220,5 @@ show create table books
 ## 10-1: comment page show has comment
 
 ## 10-2: book list
+
+## 10-3: book list back-end fix
