@@ -3,7 +3,7 @@ const { mysql } = require('../qcloud')
 
 module.exports = async (ctx) => {
     const {page, openid} = ctx.request.query
-    const size = 3
+    const size = 10
     const mysqlSelect = mysql('books')
                   .select('books.*', 'cSessionInfo.user_info')
                   .join('cSessionInfo', 'books.openid', 'cSessionInfo.open_id')
