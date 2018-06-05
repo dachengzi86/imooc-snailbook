@@ -210,3 +210,5 @@ show create table books
 ## 9-8: comment back-end interface
 
 ## 9-9: comemnt list back-end
+
+## 9-10, 9-11: comment module, share to your friend
