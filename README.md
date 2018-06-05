@@ -185,3 +185,10 @@ alter table books add column count init default 0;
 ```
 
 ## 8-8: get top swiper data
+
+## 8-9: top swiper finish
+
+```node
+mysql:
+show create table books
+```
