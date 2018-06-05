@@ -56,6 +56,7 @@ export default {
 			}
 			wx.hideNavigationBarLoading()
 		},
+		/* 获取排行榜 */
 		async getTop() {
 			const tops = await get('/weapp/top')
 			this.tops = tops.list

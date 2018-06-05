@@ -183,3 +183,5 @@ select title from books;
 ```node
 alter table books add column count init default 0;
 ```
+
+## 8-8: get top swiper data
