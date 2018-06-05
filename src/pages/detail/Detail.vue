@@ -98,8 +98,7 @@ export default {
 			this.comments = comments.list || []
 		},
 		getGeo(e) {
-			// RmKXCpjKlwyFUVVXSCXcLF4KUsOimuuy
-			const ak = 'RmKXCpjKlwyFUVVXSCXcLF4KUsOimuuy'
+			const ak = 'nLCYXhhXoQgwPQIobGoNtGuXdIQ2wYH8'
 			let url = 'http://api.map.baidu.com/geocoder/v2/'
 			if (e.target.value) {
 				wx.getLocation({
