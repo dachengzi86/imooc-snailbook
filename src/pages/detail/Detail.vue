@@ -7,7 +7,8 @@
         class='textarea'
         v-model='comment'
         :maxlength='100'
-        placeholder='请输入图书短评'></textarea>
+        placeholder='请输入图书短评'
+			></textarea>
       <div class='location'>
         地理位置：
         <switch color='#EA5A49' :checked='location' @change='getGeo'></switch>
@@ -100,7 +101,6 @@ export default {
 			// RmKXCpjKlwyFUVVXSCXcLF4KUsOimuuy
 			const ak = 'RmKXCpjKlwyFUVVXSCXcLF4KUsOimuuy'
 			let url = 'http://api.map.baidu.com/geocoder/v2/'
-
 			if (e.target.value) {
 				wx.getLocation({
 					success: geo => {
