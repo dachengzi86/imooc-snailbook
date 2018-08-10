@@ -20,30 +20,12 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-- wechat ID
-- wxc9686cc036184c63
-- wxabcaad13aeed9229
+- wxc9686cc036184c63 (读书的蜗牛 小程序)
+- wxabcaad13aeed9229 (蜗牛蜗牛图书 小程序))
 
-```console
-npm install vue-cli -g
-vue init webpack vue-demo
-```
+## 5-1 腾讯云后台
 
-## 4-1 koa入门+中间件入门
-
-- **server.js**
-
-## 4-3 async+await优雅处理异步
-
-- **asyncawait.js**
-
-## 4-5 koa 路由
-
-- **router.js**
-
-## 5-1: init project
-
-- mpvue
+- 安装 mpvue
 
 ```console
 vue init mpvue/mpvue-quickstart imooc-snailbook
@@ -52,8 +34,12 @@ vue init mpvue/mpvue-quickstart imooc-snailbook
 - copy official demo server to project
 - 首次上传将除‘智能上传’外全勾上上传, 第二次上传选‘智能上传’
 - **project.config.json**
+- 开通腾讯云
+- [腾讯云 server 下载](https://github.com/tencentyun/wafer2-quickstart-consolejs)
 
-```console
+- **project.config.json**
+
+```js
 "qcloudRoot": "./server",
 ```
 
@@ -63,6 +49,8 @@ vue init mpvue/mpvue-quickstart imooc-snailbook
 
 ## 5-3: Build local development environment
 
+- server/config.js copy
+- [本地环境](https://cloud.tencent.com/document/product/619/11442)
 - [本地搭建微信小程序的开发环境](https://cloud.tencent.com/developer/ask/25171)
 - [Secretid/SecretKey](https://console.cloud.tencent.com/capi)
 - [APPID](https://console.cloud.tencent.com/developer)
