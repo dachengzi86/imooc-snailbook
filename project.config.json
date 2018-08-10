@@ -11,7 +11,7 @@
 	"qcloudRoot": "./server",
 	"compileType": "miniprogram",
 	"appid": "wxc9686cc036184c63",
-	"projectname": "imooc-snailbook",
+	"projectname": "snailbook",
 	"condition": {
 		"search": {
 			"current": -1,
