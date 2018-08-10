@@ -43,19 +43,16 @@ vue init mpvue/mpvue-quickstart imooc-snailbook
 "qcloudRoot": "./server",
 ```
 
-## 5-2
+## 5-2 腾讯云后台代码介绍
 
-> 微信开发者工具: 修改要上传部署
+## 5-3 腾讯云后台本地开发环境搭建
 
-## 5-3: Build local development environment
-
-- server/config.js copy
+- **server/config.js**
 - [本地环境](https://cloud.tencent.com/document/product/619/11442)
 - [本地搭建微信小程序的开发环境](https://cloud.tencent.com/developer/ask/25171)
 - [Secretid/SecretKey](https://console.cloud.tencent.com/capi)
 - [APPID](https://console.cloud.tencent.com/developer)
-
-### mysql install
+- mysql install
 
 ```console
 brew intall mysql
