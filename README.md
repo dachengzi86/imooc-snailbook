@@ -48,37 +48,42 @@ vue init mpvue/mpvue-quickstart imooc-snailbook
 ## 5-3 腾讯云后台本地开发环境搭建
 
 - **server/config.js**
-- [本地环境](https://cloud.tencent.com/document/product/619/11442)
 - [本地搭建微信小程序的开发环境](https://cloud.tencent.com/developer/ask/25171)
-- [Secretid/SecretKey](https://console.cloud.tencent.com/capi)
-- [APPID](https://console.cloud.tencent.com/developer)
-- mysql install
+- [Secretid/SecretKey](https://console.qcloud.com/cam/capi)
+- [账号信息APPID](https://console.qcloud.com/developer)
+
+```js
+serverHost: 'localhost',
+tunnelServerUrl: '',
+tunnelSignatureKey: '27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89',
+// 改三个 start
+// https://console.qcloud.com/developer
+qcloudAppId: '1257291687',
+// https://console.qcloud.com/cam/capi
+qcloudSecretId: 'AKIDmuDZxO6pTCyncWvWYo4NRalXVVUDRwro',
+// https://console.qcloud.com/cam/capi
+qcloudSecretKey: 'Bb2V8oAb5iP90z16EObp7RD516EOauBT',
+// 改三个 end
+wxMessageToken: 'weixinmsgtoken',
+networkTimeout: 30000,
+```
 
 ```console
-brew intall mysql
+<!-- refresh console -->
+npm install consolemon
+npm install nodemon -g
+brew install mysql
 mysql.server start
 mysql -u root
+mysql> create database cAuth;
 ```
 
-### consolemon install, refresh console
+- run server
 
 ```console
-npm install -g consolemon
-```
-
-### create database
-
-```console
-mysql:
-create database cAuth;
-```
-
-### run server
-
-```console
-cd server:
+cd server
 npm install
-console tools/initdb.js
+node tools/initdb.js
 npm run dev
 ```
 
