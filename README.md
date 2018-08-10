@@ -20,17 +20,26 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+- wechat ID
+- wxc9686cc036184c63
+- wxabcaad13aeed9229
+
+```console
+npm install vue-cli -g
+vue init webpack vue-demo
+```
+
 ## 5-1: init project
 
-```node
-vue init mpvue/mpvue-quickstart imooc-snailbook
+- mpvue
 
-copy wechat ID
+```console
+vue init mpvue/mpvue-quickstart imooc-snailbook
 ```
 
 > copy official demo server to project, modify project.config.json
 
-```node
+```console
 "qcloudRoot": "./server",
 ```
 
@@ -42,35 +51,37 @@ copy wechat ID
 
 ## 5-3: Build local development environment
 
-> [本地环境](https://cloud.tencent.com/document/product/619/11442) server/config.js copy [本地搭建微信小程序的开发环境](https://cloud.tencent.com/developer/ask/25171) [Secretid/SecretKey](https://console.cloud.tencent.com/capi) [APPID](https://console.cloud.tencent.com/developer)
+- [本地搭建微信小程序的开发环境](https://cloud.tencent.com/developer/ask/25171)
+- [Secretid/SecretKey](https://console.cloud.tencent.com/capi)
+- [APPID](https://console.cloud.tencent.com/developer)
 
 ### mysql install
 
-```node
+```console
 brew intall mysql
 mysql.server start
 mysql -u root
 ```
 
-### nodemon install, refresh node
+### consolemon install, refresh console
 
-```node
-npm install -g nodemon
+```console
+npm install -g consolemon
 ```
 
 ### create database
 
-```node
+```console
 mysql:
 create database cAuth;
 ```
 
 ### run server
 
-```node
+```console
 cd server:
 npm install
-node tools/initdb.js
+console tools/initdb.js
 npm run dev
 ```
 
@@ -94,18 +105,18 @@ npm run dev
 
 ## 6-1: user center message show, bug
 
-```node
+```console
 mysql:
 use cAuth
 show tables;
 select * from cSessionInfo;
 ```
 
-```node
+```console
 npm install wafer2-client-sdk -S
 ```
 
-```node
+```console
 mysql:
 create database woniu;
 create table test(id int, name varchar(100));
@@ -115,15 +126,15 @@ select * from test;
 
 ### scss
 
-```node
-npm install sass-loader node-sass -D
+```console
+npm install sass-loader console-sass -D
 ```
 
 ## 6-2: user center yearprogress
 
 ## 7-1: mysql use
 
-```node
+```console
 mysql.server start
 mysql -u root
 show databases;
@@ -141,7 +152,7 @@ drop table test;
 
 ## 7-4: mysql
 
-```node
+```console
 CREATE TABLE books (
   id int(11) NOT NULL AUTO_INCREMENT,
   isbn varchar(20) NOT NULL,
@@ -162,7 +173,7 @@ CREATE TABLE books (
 
 ## 7-5
 
-```node
+```console
 select title from books;
 ```
 
@@ -180,7 +191,7 @@ select title from books;
 
 ## 8-7
 
-```node
+```console
 alter table books add column count init default 0;
 ```
 
@@ -188,7 +199,7 @@ alter table books add column count init default 0;
 
 ## 8-9: top swiper finish
 
-```node
+```console
 mysql:
 show create table books
 ```
