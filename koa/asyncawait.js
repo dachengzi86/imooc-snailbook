@@ -1,51 +1,50 @@
-﻿function delay(word) {
+﻿// function ajax(fn){
+//   setTimeout(()=>{
+//     console.log('你好')
+//     fn()
+//   },1000)
+// }
+// 1 callbacl 回调地狱
+// ajax(()=>{
+//   console.log('执行结束')
+//   ajax(()=>{
+//     ajax(()=>{
+//       ajax(()=>{
+
+//       })
+//     })
+//     console.log('执行结束2')
+//   })
+// })
+// 1. callback
+
+function delay(word) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(word)
+      resolve('hello' + word)
     }, 2000)
   })
 }
-
-delay('sun')
-  .then(word => {
-    console.log(word)
-    return delay('moon')
-  })
-  .then(word => {
-    console.log(word)
-    return delay('bug')
-  })
-  .then(word => {
-    console.log(word)
-  })
-
+// async+await一起使用
 async function start() {
-  const word1 = await delay('1')
+  const word1 = await delay('孙悟空')
   console.log(word1)
-  const word2 = await delay('2')
+  const word2 = await delay('猪八戒')
   console.log(word2)
-  const word3 = await delay('3')
+  const word3 = await delay('沙悟净')
   console.log(word3)
 }
 start()
 
-// function compose(middlewares) {
-//   return function() {
-//     return dispatch(0)
-//     function dispatch(i) {
-//       let fn = middlewares[i]
-//       if (!fn) {
-//         return Promise.resolve()
-//       }
-//       return Promise.resolve(
-//         fn(function next() {
-//           return dispatch(i + 1)
-//         })
-//       )
-//     }
-//   }
-// }
-
-// const middlewares = [fn1, fn2, fn3]
-// const finalFn = compose(middlewares)
-// finalFn()
+// delay('孙悟空')
+//   .then((word)=>{
+//     console.log(word)
+//     return delay('猪八戒')
+//   })
+//   .then((word)=>{
+//     console.log(word)
+//     return delay('沙悟净')
+//   })
+//   .then((word)=>{
+//     console.log(word)
+//   })

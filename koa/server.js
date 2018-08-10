@@ -1,24 +1,33 @@
-﻿const koa = require('koa')
-const app = new koa()
+﻿const Koa = require('koa')
+const app = new Koa()
+
+function delay() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve()
+    }, 1000)
+  })
+}
 
 // Onion model
 // 135642
 app.use(async (ctx, next) => {
   ctx.body = '1'
   // Next middleware
-  next()
+  await next()
   ctx.body += '2'
 })
 
 app.use(async (ctx, next) => {
   ctx.body += '3'
-  next()
+  await delay()
+  await next()
   ctx.body += '4'
 })
 
 app.use(async (ctx, next) => {
   ctx.body += '5'
-  next()
+  await next()
   ctx.body += '6'
 })
 
