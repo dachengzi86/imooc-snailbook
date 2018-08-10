@@ -18,7 +18,7 @@ export default {
       navigationBarBackgroundColor: '#EA5149',
       navigationBarTitleText: '蜗牛图书',
       navigationBarTextStyle: 'light'
-    },
+    }, 
     tabBar: {
       selectedColor: '#EA5149',
       list: [

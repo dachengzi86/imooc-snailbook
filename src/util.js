@@ -16,7 +16,7 @@ function request(url, method, data, header = {}) {
       method,
       header,
       url: config.host + url,
-      success: function (res) {
+      success: function(res) {
         if (res.data.code === 0) {
           resolve(res.data.data)
         } else {

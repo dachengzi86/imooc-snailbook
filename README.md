@@ -49,13 +49,13 @@ vue init webpack vue-demo
 vue init mpvue/mpvue-quickstart imooc-snailbook
 ```
 
-> copy official demo server to project, modify project.config.json
+- copy official demo server to project
+- 首次上传将除‘智能上传’外全勾上上传, 第二次上传选‘智能上传’
+- **project.config.json**
 
 ```console
 "qcloudRoot": "./server",
 ```
-
-> 首次上传将除‘智能上传’外全勾上上传, 第二次上传选‘智能上传’
 
 ## 5-2
 
@@ -99,7 +99,7 @@ npm run dev
 
 ## 5-4: 原型图
 
-## 5-5, 5-6: skeleton
+## 5-5 项目骨架搭建
 
 ## 5-7: bottom nav
 
